@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/dashBoardFragment">
+
+    <fragment
+        android:id="@+id/dashBoardFragment"
+        android:name="com.rk.weather.ui.main.dashboard.DashBoardFragment"
+        android:label="dash_board_fragment"
+        tools:layout="@layout/dash_board_fragment">
+        <action
+            android:id="@+id/action_dashBoardFragment_to_searchFragment"
+            app:destination="@id/searchFragment" />
+        <action
+            android:id="@+id/action_dashBoardFragment_to_bookmarkFragment"
+            app:destination="@id/bookmarkFragment" />
+        <action
+            android:id="@+id/action_dashBoardFragment_to_weatherDetailsFragment"
+            app:destination="@id/weatherDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.rk.weather.ui.main.search.SearchFragment"
+        android:label="search_fragment"
+        tools:layout="@layout/search_fragment">
+<!--        <action-->
+<!--            android:id="@+id/action_searchFragment_to_dashBoardFragment"-->
+<!--            app:destination="@id/dashBoardFragment"-->
+<!--            app:launchSingleTop="true"-->
+<!--            app:popUpTo="@+id/searchFragment"-->
+<!--            app:popUpToInclusive="true" />-->
+    </fragment>
+    <fragment
+        android:id="@+id/bookmarkFragment"
+        android:name="com.rk.weather.ui.main.bookmark.BookmarkFragment"
+        android:label="BookmarkFragment"
+        tools:layout="@layout/bookmark_fragment">
+<!--        <action-->
+<!--            android:id="@+id/action_bookmarkFragment_to_dashBoardFragment"-->
+<!--            app:destination="@id/dashBoardFragment"-->
+<!--            app:launchSingleTop="true"-->
+<!--            app:popUpTo="@+id/bookmarkFragment"-->
+<!--            app:popUpToInclusive="true" />-->
+    </fragment>
+    <fragment
+        android:id="@+id/weatherDetailsFragment"
+        android:name="com.rk.weather.ui.main.weatherdetails.WeatherDetailsFragment"
+        android:label="WeatherDetailsFragment">
+        <argument
+            android:name="weatherItem"
+            app:argType="com.rk.weather.data.model.ListItem" />
+    </fragment>
+</navigation>
