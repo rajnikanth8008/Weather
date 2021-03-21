@@ -109,6 +109,9 @@ class DashBoardFragment : Fragment() {
                     }
                 }
             })
+        binding.aboutapp.setOnClickListener {
+            findNavController().navigate(R.id.action_dashBoardFragment_to_aboutAppFragment)
+        }
     }
 
     private fun initForecastAdapter(list: List<ListItem>) {

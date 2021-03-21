@@ -77,6 +77,20 @@
                     android:orientation="horizontal"
                     tools:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                     tools:listitem="@layout/item_forecast" />
+
+                <TextView
+                    android:id="@+id/aboutapp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/recyclerForecast"
+                    android:layout_margin="16dp"
+                    android:text="About App"
+                    android:textColor="@color/purple_500"
+                    android:textSize="19sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="5dp"
+                    android:layout_alignEnd="@id/recyclerForecast"/>
+
             </RelativeLayout>
         </androidx.core.widget.NestedScrollView>
 
